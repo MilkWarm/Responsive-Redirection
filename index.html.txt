@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang=eng>
+    <head>
+        <title>Responsive Redirection</title>
+        <style>
+            body {
+                background-color:darkslategray;
+                margin-top: 250px;
+                align-items: center;
+                justify-content: center;
+            }
+            h2 {
+                color: antiquewhite;
+                text-align: center;
+            }
+            p {
+                color: antiquewhite;
+                text-align: center;
+                margin-top: 200px;
+            }
+        .main-container{
+            position: absolute;
+            
+        }
+        .front-image {
+            position: absolute;
+            z-index: 1;
+            left: 800px;
+        }
+        .button {
+            position:absolute;
+            top: 50px;
+            z-index: 5;
+            padding: 105px;
+            height: 330px;
+            background-color: transparent;
+            left: 800px;
+            cursor: pointer;
+            border-color: transparent;
+        }
+
+            </style>
+            <body>
+                <h2>You are now signed in!</h2>
+                <p>⬇️Enjoy this clickable image below.⬇️</p>
+                <div class="main-container">
+                    <button class="button"></button>
+                <img src="https://media.tenor.com/arqlNu8gyJYAAAAM/cat-cat-jumping.gif" class="front-image">
+                </div>
+                 <script
+            src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.9.1/tsparticles.confetti.bundle.min.js"></script>
+            <script>
+                const button = document.querySelector("button")
+                button.addEventListener("click", ()=>{
+                    confetti({
+  particleCount: 100,
+  spread: 70,
+  origin: { y: 0.6 },
+});
+                })
+            </script>
+            </body>
